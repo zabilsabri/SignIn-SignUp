@@ -1,0 +1,27 @@
+main{
+    min-height: 100vh;
+    background: linear-gradient(to right top, #000000, #5c5c5c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container{
+    border: solid;
+    width: 60vh;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.form-content{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+.text-box{
+    border-bottom: green solid;
+    padding-top: 20px;
+}
