@@ -11,18 +11,25 @@
 </head>
 
 <body>
+    <img src="bg/SMAN 11 MAKASSAR.jpeg" class="bg-image" alt="background blur">
     <main>
         <div class="container">
-            <form>
+            <div class="heading-container">
+                <h1>LOG-IN</h1>
+            </div>
+            <form action="loginBE.php" method="POST">
                 <div class="text-box">
-                    <input type="text" class="form-content" placeholder="Username">
+                    <input type="email" class="form-content" name="username" placeholder="Email">
                 </div>
                 <div class="text-box">
-                    <input type="password" class="form-content" placeholder="Password">
+                    <input type="password" class="form-content" name="password" placeholder="Password">
                 </div>
-                <small style="color: white; font-size: x-small;">Don't have an account?<a href="register.html">REGISTER HERE</a></small>
-
+                <a href="" class="forget-password">Forget Password?</a>
+                <button type="button" name="login" class="btn btn-dark">LOGIN</button>
             </form>
+            <div class="footer-container">
+                <small>Don't Have an Account? <a href="register.html">Register Here</a></small>
+            </div>
         </div>
     </main>
 </body>

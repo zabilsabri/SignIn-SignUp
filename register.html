@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+    <title>REGISTER</title>
 </head>
+
 <body>
-    
+    <img src="bg/SMAN 11 MAKASSAR.jpeg" class="bg-image" alt="background blur">
+    <main>
+        <div class="register-container">
+            <div class="heading-container">
+                <h1>REGISTER</h1>
+            </div>
+            <form action="registerBE.php" method="POST">
+                <div class="text-box">
+                    <input type="email" class="form-content" name="username" placeholder="Username">
+                </div>
+                <div class="text-box">
+                    <input type="text" class="form-content" name="Email" placeholder="Email">
+                </div>
+                <div class="text-box">
+                    <input type="password" class="form-content" name="password" placeholder="Password">
+                </div>
+                <div class="text-box">
+                    <input type="password" class="form-content" name="confirm-password" placeholder="Confirm Password">
+                </div>
+                <div class="d-grid gap-1" style="padding-top: 20px;">
+                    <button class="btn btn-dark" type="button">REGISTER</button>
+                </div>
+            </form>
+            <div class="footer-container">
+                <small>Already Have an Account? <a href="login.html">Login Here</a></small>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
