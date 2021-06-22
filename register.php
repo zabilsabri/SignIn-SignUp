@@ -17,6 +17,22 @@
             <div class="heading-container">
                 <h1>REGISTER</h1>
             </div>
+            
+            <!----INDICATOR SUCCESS------->
+            <?php if (isset($_GET['success'])){ ?>
+                <p style="color: white; background: #6eff63;" class="reg-success">Account Successfully Made</p>
+            <?php } ?>
+
+            <!----INDICATOR PASSWORD DIDN'T MATCH------->
+            <?php if (isset($_GET['passfailed'])){ ?>
+                <p style="color: white; background: #fc3e30;" class="reg-failed">Password Didn't Match!</p>
+            <?php } ?>
+
+            <!----INDICATOR EMAIL IS USED------->
+            <?php if (isset($_GET['accalready'])){ ?>
+                <p style="color: white; background: #fc3e30;" class="reg-failed">Email Already Used!</p>
+            <?php } ?>
+
             <form action="registerBE.php" method="POST">
                 <div class="text-box">
                     <input type="text" class="form-content" name="Username" placeholder="Username">
@@ -35,7 +51,7 @@
                 </div>
             </form>
             <div class="footer-container">
-                <small>Already Have an Account? <a href="login.html">Login Here</a></small>
+                <small>Already Have an Account? <a href="login.php">Login Here</a></small>
             </div>
         </div>
     </main>

@@ -17,6 +17,9 @@
             <div class="heading-container">
                 <h1>LOG-IN</h1>
             </div>
+            <?php if(isset($_GET['error'])){ ?>
+                <p style="color: white; background: #fc3e30;" class="error">Your Email or Password is Incorrect!</p>
+            <?php } ?>
             <form action="loginBE.php" method="POST">
                 <div class="text-box">
                     <input type="email" class="form-content" name="email" placeholder="Email">
@@ -28,7 +31,7 @@
                 <button type="submit" name="login" class="btn btn-dark">LOGIN</button>
             </form>
             <div class="footer-container">
-                <small>Don't Have an Account? <a href="register.html">Register Here</a></small>
+                <small>Don't Have an Account? <a href="register.php">Register Here</a></small>
             </div>
         </div>
     </main>
