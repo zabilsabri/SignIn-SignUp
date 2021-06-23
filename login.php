@@ -18,7 +18,7 @@
                 <h1>LOG-IN</h1>
             </div>
             <?php if(isset($_GET['error'])){ ?>
-                <p style="color: white; background: #fc3e30;" class="error">Your Email or Password is Incorrect!</p>
+                <b style="color: red;" class="error">Your Email or Password is Incorrect!</b>
             <?php } ?>
             <form action="loginBE.php" method="POST">
                 <div class="text-box">

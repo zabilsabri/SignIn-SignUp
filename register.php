@@ -20,17 +20,17 @@
             
             <!----INDICATOR SUCCESS------->
             <?php if (isset($_GET['success'])){ ?>
-                <p style="color: white; background: #6eff63;" class="reg-success">Account Successfully Made</p>
+                <b style="color: green;" class="reg-success">Account Successfully Made</b>
             <?php } ?>
 
             <!----INDICATOR PASSWORD DIDN'T MATCH------->
             <?php if (isset($_GET['passfailed'])){ ?>
-                <p style="color: white; background: #fc3e30;" class="reg-failed">Password Didn't Match!</p>
+                <b style="color: red;" class="reg-failed">Password Didn't Match!</b>
             <?php } ?>
 
             <!----INDICATOR EMAIL IS USED------->
             <?php if (isset($_GET['accalready'])){ ?>
-                <p style="color: white; background: #fc3e30;" class="reg-failed">Email Already Used!</p>
+                <b style="color: red;" class="reg-failed">Email Already Used!</b>
             <?php } ?>
 
             <form action="registerBE.php" method="POST">
