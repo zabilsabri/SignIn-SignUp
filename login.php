@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <img src="bg/SMAN 11 MAKASSAR.jpeg" class="bg-image" alt="background blur">
     <main>
         <div class="container">
             <div class="heading-container">
                 <h1>LOG-IN</h1>
             </div>
-            <?php if(isset($_GET['error'])){ ?>
-                <b style="color: red;" class="error">Your Email or Password is Incorrect!</b>
+            <?php if(isset($_GET['wrong'])){ ?>
+                <b class="failed">Your Email or Password is Incorrect!</b>
+            <?php } ?>
+            <?php if(isset($_GET['empty'])){ ?>
+                <b class="failed">FILL ALL THE EMPTY FIELDS!</b>
             <?php } ?>
             <form action="loginBE.php" method="POST">
                 <div class="text-box">

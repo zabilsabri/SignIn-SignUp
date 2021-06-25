@@ -14,14 +14,19 @@ if (isset($_POST['login'])){
     $email = mysqli_real_escape_string($conn, $email);
     $password = mysqli_real_escape_string($conn, $password);
 
-    $sql = mysqli_query($conn, "select email, password from user_info where email = '$email' and password = '$password'");
+    if(!empty($email) && !empty($password)){
+        $sql = mysqli_query($conn, "select email, password from user_info where email = '$email' and password = '$password'");
 
-    $row = mysqli_fetch_array($sql);
-    if ($row['email'] == $email && $row['password'] == $password){
-        echo "LOGIN SUCCESS!!";
+        $row = mysqli_fetch_array($sql);
+        if ($row['email'] == $email && $row['password'] == $password){
+            echo "LOGIN SUCCESS!!";
+        } else {
+            header('location: login.php?wrong');
+        };
     } else {
-        header('location: login.php?error');
+        header('location: login.php?empty');
     };
+    
 };
 
 

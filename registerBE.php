@@ -22,21 +22,26 @@ if(isset($_POST['register'])){
     $password = mysqli_real_escape_string($conn, $password);
     $Cpassword = mysqli_real_escape_string($conn, $Cpassword);
 
-    $sqli = mysqli_query($conn, "select id, email from user_info where email = '$email'");
-    $rows = mysqli_fetch_array($sqli);
+    if (!empty($user_name) && !empty($email) && !empty($password) && !empty($Cpassword)){
+        $sqli = mysqli_query($conn, "select id, email from user_info where email = '$email'");
+        $rows = mysqli_fetch_array($sqli);
 
-    if ($rows['email'] == $email){
-        header('location: register.php?accalready');
-    } else {
-        if($password == $Cpassword){
-            $sql = "insert into user_info(username , email , password) values ('$user_name', '$email' , '$password')";
-            if ($conn->query($sql) === TRUE){
-                header('location: register.php?success');
-            };
+        if ($rows['email'] == $email){
+            header('location: register.php?accalready');
         } else {
-            header('location: register.php?passfailed');
-        };
+            if($password == $Cpassword){
+                $sql = "insert into user_info(username , email , password) values ('$user_name', '$email' , '$password')";
+                if ($conn->query($sql) === TRUE){
+                    header('location: register.php?success');
+                };
+            } else {
+                header('location: register.php?passfailed');
+            };
+        }
+    } else {
+        header('location: register.php?empty');
     };
+
     
 };
 

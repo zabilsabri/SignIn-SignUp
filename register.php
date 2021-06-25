@@ -11,27 +11,28 @@
 </head>
 
 <body>
-    <img src="bg/SMAN 11 MAKASSAR.jpeg" class="bg-image" alt="background blur">
     <main>
         <div class="register-container">
             <div class="heading-container">
                 <h1>REGISTER</h1>
             </div>
             
-            <!----INDICATOR SUCCESS------->
             <?php if (isset($_GET['success'])){ ?>
-                <b style="color: green;" class="reg-success">Account Successfully Made</b>
+                <b class="success">Account Successfully Made</b>
             <?php } ?>
 
-            <!----INDICATOR PASSWORD DIDN'T MATCH------->
             <?php if (isset($_GET['passfailed'])){ ?>
-                <b style="color: red;" class="reg-failed">Password Didn't Match!</b>
+                <b class="failed">Password Didn't Match!</b>
             <?php } ?>
 
-            <!----INDICATOR EMAIL IS USED------->
             <?php if (isset($_GET['accalready'])){ ?>
-                <b style="color: red;" class="reg-failed">Email Already Used!</b>
+                <b class="failed">Email Already Used!</b>
             <?php } ?>
+
+            <?php if (isset($_GET['empty'])){ ?>
+                <b class="failed">FILL ALL THE EMPTY FIELDS!</b>
+            <?php } ?>
+
 
             <form action="registerBE.php" method="POST">
                 <div class="text-box">
