@@ -16,17 +16,13 @@
             <div class="heading-container">
                 <h1>REGISTER</h1>
             </div>
-            
-            <?php if (isset($_GET['success'])){ ?>
-                <b class="success">Account Successfully Made</b>
-            <?php } ?>
 
             <?php if (isset($_GET['passfailed'])){ ?>
-                <b class="failed">Password Didn't Match!</b>
+                <b class="failed">PASSWORD DIDN'T MATCH!</b>
             <?php } ?>
 
             <?php if (isset($_GET['accalready'])){ ?>
-                <b class="failed">Email Already Used!</b>
+                <b class="failed">EMAIL ALREADY USED!</b>
             <?php } ?>
 
             <?php if (isset($_GET['empty'])){ ?>
@@ -47,9 +43,7 @@
                 <div class="text-box">
                     <input type="password" class="form-content" name="Confirm-password" placeholder="Confirm Password">
                 </div>
-                <div class="d-grid gap-1" style="padding-top: 20px;">
-                    <button class="btn btn-dark" name="register" type="submit">REGISTER</button>
-                </div>
+                <button class="btn btn-dark" name="register" type="submit">REGISTER</button>
             </form>
             <div class="footer-container">
                 <small>Already Have an Account? <a href="login.php">Login Here</a></small>

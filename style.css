@@ -54,7 +54,6 @@ form{
     text-align: right;
     text-decoration: none;
     color: white;
-    padding-bottom: 10px;
 }
 .footer-container{
     padding-top: 20px;
@@ -75,15 +74,57 @@ a{
     align-items: center;
     justify-content: center;
 }
-.button-register{
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .failed{
     color: red;
 }
 .success{
     color: green;
+}
+option{
+    color: black;
+}
+.Fpassword-container{
+    background: black;
+    opacity: 0.9;
+    border: solid;  
+    width: 60vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Fpassword-heading-container{
+    color: white;
+    padding-bottom: 10px;
+}
+
+.Fpassword-form{
+    display: flex;
+    width: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Fpassword-form-content{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    width: 50vh;
+}
+.Fpassword-exp{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: grey;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+button{
+    margin-top: 10px;
 }
