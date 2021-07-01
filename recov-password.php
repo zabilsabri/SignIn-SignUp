@@ -10,23 +10,37 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>RECOVER PASSWORD</title>
+    <title>PASSWORD CONFIMATION</title>
 </head>
 
 <body>
     <main>
-        <div class="F-password-container">
+        <div class="R-password-container">
             <div class="R-password-heading-container">
-                <h3>RECOVER PASSWORD</h3>
+                <h3>CONFIRM PASSWORD</h3>
             </div>
             <div class="R-password-exp">
-                <p>Put in your Email, and we will send the question to recover your password</p>
+                <p>Choose The Question and Answer It, To Recover Your Password Someday!</p>
+                <?php if(isset($_GET['wrong'])){ ?>
+                    <b class="failed">DOUBLE CHECK YOU'RE EMAIL!</b>
+                <?php } ?>
             </div>
-            <form class="R-password-form" action="FpasswordBE.php" method="POST">
+            <form class="R-password-form" action="recov-passwordBE.php" method="POST">
                 <div class="text-box">
                     <input type="email" class="R-password-form-content" name="email" placeholder="Email">
                 </div>
-                <button type="submit" name="send-QFpassword" class="btn btn-dark">SEND</button>
+                <div class="text-box">
+                    <select class="R-password-form-content" name="QFpassword" aria-label="Default select example">
+                        <option selected>Your first pet's name?</option>
+                        <option>Your first teacher's name?</option>
+                        <option>Your first girlfriend's name?</option>
+                        <option>Your phone's number?</option>
+                    </select>                
+                </div>
+                <div class="text-box">
+                    <input type="password" class="form-content" name="AFpassword" placeholder="Answer">
+                </div>
+                <button type="submit" name="confirm-R-password" class="btn btn-dark">CONFIRM</button>
             </form>
         </div>
     </main>

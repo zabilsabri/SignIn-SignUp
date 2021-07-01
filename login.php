@@ -29,7 +29,7 @@
                 <div class="text-box">
                     <input type="password" class="form-content" name="password" placeholder="Password">
                 </div>
-                <a href="" class="forget-password">Forget Password?</a>
+                <a href="Fpassword.php" class="forget-password">Forget Password?</a>
                 <button type="submit" name="login" class="btn btn-dark">LOGIN</button>
             </form>
             <div class="footer-container">

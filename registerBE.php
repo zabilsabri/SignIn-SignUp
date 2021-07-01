@@ -32,7 +32,7 @@ if(isset($_POST['register'])){
             if($password == $Cpassword){
                 $sql = "insert into user_info(username , email , password) values ('$user_name', '$email' , '$password')";
                 if ($conn->query($sql) === TRUE){
-                    header('location: Fpassword.php');
+                    header('location: recov-password.php');
                 };
             } else {
                 header('location: register.php?passfailed');

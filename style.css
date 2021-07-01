@@ -76,6 +76,7 @@ a{
 }
 
 .failed{
+    padding-bottom: 10px;
     color: red;
 }
 .success{
@@ -84,7 +85,7 @@ a{
 option{
     color: black;
 }
-.Fpassword-container{
+.R-password-container{
     background: black;
     opacity: 0.9;
     border: solid;  
@@ -96,27 +97,28 @@ option{
     justify-content: center;
 }
 
-.Fpassword-heading-container{
+.R-password-heading-container{
     color: white;
     padding-bottom: 10px;
 }
 
-.Fpassword-form{
+.R-password-form{
     display: flex;
     width: 50vh;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.Fpassword-form-content{
+.R-password-form-content{
     border: none;
     outline: none;
     background: none;
     color: white;
     width: 50vh;
 }
-.Fpassword-exp{
+.R-password-exp{
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
     background: grey;
@@ -127,4 +129,16 @@ option{
 }
 button{
     margin-top: 10px;
+}
+
+.F-password-container{
+    background: black;
+    opacity: 0.9;
+    border: solid;  
+    width: 55vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
