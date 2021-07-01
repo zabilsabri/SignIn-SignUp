@@ -19,11 +19,11 @@
             <div class="R-password-heading-container">
                 <h3>CONFIRM PASSWORD</h3>
             </div>
+            <?php if(isset($_GET['wrong'])){ ?>
+                    <b class="failed">Double Check Your Email!</b>
+            <?php } ?>
             <div class="R-password-exp">
                 <p>Choose The Question and Answer It, To Recover Your Password Someday!</p>
-                <?php if(isset($_GET['wrong'])){ ?>
-                    <b class="failed">DOUBLE CHECK YOU'RE EMAIL!</b>
-                <?php } ?>
             </div>
             <form class="R-password-form" action="recov-passwordBE.php" method="POST">
                 <div class="text-box">

@@ -24,7 +24,7 @@ if (isset($_POST['confirm-R-password'])){
         $rows = mysqli_fetch_array($sql);
 
         if ($rows['email'] != $email){
-            header("location: recov-password?wrong");
+            header('location: recov-password.php?wrong');
         } else {
             $sqli = "update user_info set QFpassword = '$QFpassword', AFpassword = '$AFpassword' where email = '$email'";
             if ($conn->query($sqli) === TRUE){
