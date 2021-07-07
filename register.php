@@ -17,6 +17,10 @@
                 <h1>REGISTER</h1>
             </div>
 
+            <?php if(isset($_GET['success'])){ ?>
+                <b class="success">ACCOUNT IS SUCCESSFULLY MADE!</b>
+            <?php } ?>
+
             <?php if (isset($_GET['passfailed'])){ ?>
                 <b class="failed">PASSWORD DIDN'T MATCH!</b>
             <?php } ?>

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'connection.php';
 
 if (isset($_POST['login'])){
@@ -18,8 +18,10 @@ if (isset($_POST['login'])){
         $sql = mysqli_query($conn, "select email, password from user_info where email = '$email' and password = '$password'");
 
         $row = mysqli_fetch_array($sql);
+
         if ($row['email'] == $email && $row['password'] == $password){
-            echo "LOGIN SUCCESS!!";
+            $_SESSION['login'] = true;  
+            header('location: website.php');
         } else {
             header('location: login.php?wrong');
         };
@@ -27,6 +29,8 @@ if (isset($_POST['login'])){
         header('location: login.php?empty');
     };
     
+} else {
+    header("location: login.php?notlogin");
 };
 
 

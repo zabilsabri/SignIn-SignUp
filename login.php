@@ -16,12 +16,19 @@
             <div class="heading-container">
                 <h1>LOG-IN</h1>
             </div>
+
+            <?php if(isset($_GET['notlogin'])) { ?>
+                <b class="failed">YOU SHOULD LOGIN FIRST!</b>
+            <?php } ?>
+            
             <?php if(isset($_GET['wrong'])){ ?>
                 <b class="failed">Your Email or Password is Incorrect!</b>
             <?php } ?>
+            
             <?php if(isset($_GET['empty'])){ ?>
                 <b class="failed">FILL ALL THE EMPTY FIELDS!</b>
             <?php } ?>
+            
             <form action="loginBE.php" method="POST">
                 <div class="text-box">
                     <input type="email" class="form-content" name="email" placeholder="Email">

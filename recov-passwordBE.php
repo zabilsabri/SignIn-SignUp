@@ -28,9 +28,9 @@ if (isset($_POST['confirm-R-password'])){
         } else {
             $sqli = "update user_info set QFpassword = '$QFpassword', AFpassword = '$AFpassword' where email = '$email'";
             if ($conn->query($sqli) === TRUE){
-                echo "berhasil masuk";
+                header('location: register.php?success');
             } else {
-                echo "ndk bisa masuk";
+                echo "PHP FAILED";
             };
         };
     };
