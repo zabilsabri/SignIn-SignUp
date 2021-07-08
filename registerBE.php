@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include "connection.php";
 
 
@@ -26,12 +27,15 @@ if(isset($_POST['register'])){
         $sqli = mysqli_query($conn, "select id, email from user_info where email = '$email'");
         $rows = mysqli_fetch_array($sqli);
 
+        $_SESSION['email'] = $email;
+
         if ($rows['email'] == $email){
             header('location: register.php?accalready');
         } else {
             if($password == $Cpassword){
                 $sql = "insert into user_info(username , email , password) values ('$user_name', '$email' , '$password')";
                 if ($conn->query($sql) === TRUE){
+                    $_SESSION['register'] = true;
                     header('location: recov-password.php');
                 };
             } else {

@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['register'])){
+    header('location: register.php?notregister');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,18 +26,12 @@
     <main>
         <div class="R-password-container">
             <div class="R-password-heading-container">
-                <h3>CONFIRM PASSWORD</h3>
+                <h3>RECOVER PASSWORD</h3>
             </div>
-            <?php if(isset($_GET['wrong'])){ ?>
-                    <b class="failed">Double Check Your Email!</b>
-            <?php } ?>
             <div class="R-password-exp">
                 <p>Choose The Question and Answer It, To Recover Your Password Someday!</p>
             </div>
             <form class="R-password-form" action="recov-passwordBE.php" method="POST">
-                <div class="text-box">
-                    <input type="email" class="R-password-form-content" name="email" placeholder="Email">
-                </div>
                 <div class="text-box">
                     <select class="R-password-form-content" name="QFpassword" aria-label="Default select example">
                         <option selected>Your first pet's name?</option>

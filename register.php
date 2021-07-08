@@ -17,6 +17,10 @@
                 <h1>REGISTER</h1>
             </div>
 
+            <?php if(isset($_GET['notregister'])){ ?>
+                <b class="failed">YOU SHOULD REGISTER FIRST!</b>
+            <?php } ?>
+
             <?php if(isset($_GET['success'])){ ?>
                 <b class="success">ACCOUNT IS SUCCESSFULLY MADE!</b>
             <?php } ?>
